@@ -11,11 +11,11 @@ const Seriescard = () => {
           srcset=""
         />
       </div>
-     <div className="p-2">
-     <h1 className="font-bold">Name</h1>
-      <p>" Master Chief, Spartan-117 / John-117 "</p>
-      <p class="episode_count text-slate-500">17 Episodes</p>
-     </div>
+      <div className="p-2">
+        <h1 className="font-bold">Name</h1>
+        <p>" Master Chief, Spartan-117 / John-117 "</p>
+        <p class="episode_count text-slate-500">17 Episodes</p>
+      </div>
     </div>
   );
 };

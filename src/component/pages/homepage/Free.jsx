@@ -1,33 +1,28 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { updateFree,updateFreeTabs } from '../../../redux/homeSlice';
-import { MOVIES_FREE } from '../../../services/Constants';
+import React from "react";
+import { useSelector } from "react-redux";
+import { updateFree, updateFreeTabs } from "../../../redux/homeSlice";
+import { MOVIES_FREE } from "../../../services/Constants";
 import useFetch from "../../../Hooks/useFetch";
-import Section from './Section';
-
-
+import Section from "./Section";
 
 function Free() {
+  useFetch("GET", MOVIES_FREE, updateFree);
+  const free = useSelector((state) => state.home.free);
+  const freeTabs = useSelector((state) => state.home.freeTabs);
 
-    useFetch("GET",MOVIES_FREE,updateFree);
-  const free = useSelector((state)=>state.home.free);
-  const freeTabs = useSelector((state)=>state.home.freeTabs);
-    
-  console.log("IN FREEEE.............",free);
-    
-    return (
+  console.log("IN FREEEE.............", free);
+
+  return (
     <div>
-        <Section 
-      title={"Free To Watch"}
-      data ={free}  
-      tabList={freeTabs}
-      updateTab = {updateFreeTabs}
-      setData={updateFree}
-    >
-
-    </Section>
+      <Section
+        title={"Free To Watch"}
+        data={free}
+        tabList={freeTabs}
+        updateTab={updateFreeTabs}
+        setData={updateFree}
+      />
     </div>
-  )
+  );
 }
 
-export default Free
+export default Free;
