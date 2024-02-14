@@ -1,10 +1,10 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { TRENDING_URL_TODAY, TRENDING_URL_WEEK } from '../../services/Constants';
+import { TRENDING_URL_TODAY, TRENDING_URL_WEEK } from '../../../services/Constants';
 import Section from './Section';
-import { updateTrending ,updateTrendingTabs } from '../../redux/homeSlice';
+import { updateTrending ,updateTrendingTabs } from '../../../redux/homeSlice';
 
-import useFetch from '../../Hooks/useFetch';
+import useFetch from '../../../Hooks/useFetch';
 
 function Trending() {
  

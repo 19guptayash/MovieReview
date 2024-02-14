@@ -1,5 +1,5 @@
 import './App.css'
-import Detailsmain from './components/pages/detail/Detailsmain'
+import Detailsmain from './component/pages/detail/Detailsmain'
 
 // import Homemain from './components/pages/homepage/Homemain'
 
@@ -8,8 +8,9 @@ import './App.css'
 import { apiConnector } from './services/apiconnector'
 import {  TRENDING_URL_TODAY } from './services/Constants';
 import{ Route ,Routes} from "react-router-dom";
-
-import Homepage from './component/HomePage/Homepage';
+import Header from "./component/Common/Header"
+import Homepage from './component/pages/homepage/Homepage';
+import Footer from './component/Common/Footer'
 
 
 
@@ -37,10 +38,14 @@ function App() {
   return (
     <>
      {/* <Homemain/> */}
-     <Detailsmain/>
+     {/* <Detailsmain/> */}
+      <Header/>
+
       <Routes>
         <Route path='/' element={<Homepage></Homepage>}></Route>
+        <Route path='/movies/:movieId' element={<Detailsmain></Detailsmain>}></Route>
       </Routes>
+      <Footer/>
     </>
   )
 }

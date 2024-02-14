@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { updateFree,updateFreeTabs } from '../../redux/homeSlice';
-import { MOVIES_FREE } from '../../services/Constants';
-import useFetch from '../../Hooks/useFetch';
+import { updateFree,updateFreeTabs } from '../../../redux/homeSlice';
+import { MOVIES_FREE } from '../../../services/Constants';
+import useFetch from "../../../Hooks/useFetch";
 import Section from './Section';
 
 

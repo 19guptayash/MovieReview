@@ -9,6 +9,7 @@ export const MOVIES_FREE = "https://api.themoviedb.org/3/discover/movie?include_
 
 export const MOVIES_RENT = "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_watch_monetization_types=rent"
 
+export const MOVIES_DETAILS = "https://api.themoviedb.org/3/movie/"
 
 
 

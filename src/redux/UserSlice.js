@@ -17,12 +17,9 @@ export const userSlice = createSlice({
         // }
     }
 
-<<<<<<< HEAD
-=======
 });
 
 
 // export const {hello} = userSlice.actions;
 
->>>>>>> 06e1303efcdae5d37563d107c95c1aeefb8efaff
 export default userSlice.reducer;

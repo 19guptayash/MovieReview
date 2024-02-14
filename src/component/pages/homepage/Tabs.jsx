@@ -1,5 +1,5 @@
 import React from 'react'
-import { apiConnector } from '../../services/apiconnector'
+import { apiConnector } from '../../../services/apiconnector'
 import { useDispatch } from 'react-redux'
 
 function Tabs({tabList,setData,updateTab}) {

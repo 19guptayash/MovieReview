@@ -1,6 +1,6 @@
 import React from 'react'
 import Tabs from './Tabs'
-import Card from '../Common/Card'
+import Card from '../../Common/Card'
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';

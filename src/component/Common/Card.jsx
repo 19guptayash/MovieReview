@@ -3,16 +3,19 @@ import { THUMBNAIL } from '../../services/Constants';
 import { SlOptions } from "react-icons/sl";
 import { CircularProgressbar ,buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-
+import { Link } from 'react-router-dom';
 function Card({media}) {
-  // console.log("IN CARD ....",media);
+  console.log("IN CARD ....",media);
   // console.log("IN CARD ....",THUMBNAIL+media.poster_path);
   let percentage =(media.vote_average*10).toFixed();
 
   return (
     <div className= "w-[200px] " >
       <div className='relative'>
-        <img src={`${THUMBNAIL+media.poster_path}`} alt="" className=' rounded-md  w-[100%] h-[330px]' />
+        <Link to={`/movies/${media.id}`}>
+          <img src={`${THUMBNAIL+media.poster_path}`} alt="" className=' rounded-md  w-[100%] h-[330px]' />
+        </Link>
+        
         <div 
           className='absolute top-1 right-1 hover:bg-gray-300 rounded-full w-[20px] h-[20px] p-1 flex justify-center items-center text-gray-200'>
           <SlOptions></SlOptions>
