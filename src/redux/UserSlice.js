@@ -1,3 +1,4 @@
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     user:{
@@ -5,13 +6,20 @@ const initialState = {
     },
     favourite:[],
     watchList:[]
-}
-export const userSlice = {
+};
+
+export const userSlice = createSlice({
     name:"user",
     initialState,
-    reducer:{
-
+    reducers:{
+        // hello:()=>{
+        //     console.log("Heloo");
+        // }
     }
-}
 
-export default userSlice.reducer();
+});
+
+
+// export const {hello} = userSlice.actions;
+
+export default userSlice.reducer;
