@@ -41,7 +41,7 @@ const responsive = {
 
             {
                 data.map((ele)=>{
-                    return <Card media={ele} key={ele.id}></Card>
+                    return <Card media={ele} borderFlag={false}  key={ele.id}></Card>
                 })
             }
             </Carousel>

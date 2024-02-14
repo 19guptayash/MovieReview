@@ -1,14 +1,29 @@
 import React from 'react'
 import {FaSearch} from 'react-icons/fa'
+import { MoviesDrop, TvShowsDrop } from '../../services/HeaderData'
+import { updateMovies, updateTVShows } from '../../redux/ExploreSlice'
+import DropDown from './DropDown'
+import { Link } from 'react-router-dom'
+
 const Header = () => {
+
   return (
     <div className='flex justify-between px-8 items-center gap-2 bg-slate-800 h-16 font-semibold max-w-full overflow-hidden'>
       <div className='flex items-center gap-8 min-w-fit'>
           <div className='Logo hover:cursor-pointer '>
-            <img src='https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg' alt='logo' className='w-40'/>
+            <Link to="/">
+              <img src='https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg' alt='logo' className='w-40'/>
+            </Link>
           </div>
-          <div className='text-gray-100 hover:cursor-pointer'>Movies</div>
-          <div className='text-gray-100 hover:cursor-pointer'>TV Shows</div>
+          <div className='group p-2'>
+            <div className='text-gray-100 hover:cursor-pointer'>Movies</div>
+            <DropDown   dropData={MoviesDrop} updateData = {updateMovies}></DropDown>
+          </div>
+          <div className='group p-2'>
+            <div className='text-gray-100 hover:cursor-pointer'>TV Shows</div>
+            <DropDown   dropData={TvShowsDrop} updateData = {updateTVShows}></DropDown>
+          </div>
+          
           <div className='text-gray-100 hover:cursor-pointer'>People</div>
           <div className='text-gray-100 hover:cursor-pointer'>More</div>
       </div>
