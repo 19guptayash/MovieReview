@@ -1,10 +1,17 @@
 import React from 'react'
+import Header from '../../common/Header'
+import Footer from '../../common/Footer'
+import Details from './Details'
+import SeriesCase from './SeriesCast'
 
 const Detailsmain = () => {
   return (
-    <div>
-        
-    </div>
+    <>
+    <Header/>
+     <Details/>
+     <SeriesCase/>
+    <Footer/>
+    </>
   )
 }
 
